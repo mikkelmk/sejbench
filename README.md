@@ -1,4 +1,4 @@
-# sejbench
+# SejBench
 
 ```bash
 git clone https://github.com/mikkelmk/sejbench.git
