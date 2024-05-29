@@ -2,9 +2,7 @@
 
 #### How To Run
 ```bash
-git clone https://github.com/mikkelmk/sejbench.git
-cd sejbench
-python3 sejbench.py
+git clone https://github.com/mikkelmk/sejbench.git && python3 sejbench/sejbench.py
 ```
 
 #### Example Result
