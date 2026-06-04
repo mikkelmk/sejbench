@@ -16,7 +16,7 @@ print(f"CPU Test: {round(cpu_time, 2)}s")
 
 file_start = time.time()
 file_name = "sejbench-file.txt"
-payload = "123456789" * 1_000_000
+payload = "123456789" * 100_000
 for i in range(1500):
     with open(file_name, "w") as f:
         f.write(payload)
