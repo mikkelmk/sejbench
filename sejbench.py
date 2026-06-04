@@ -1,4 +1,5 @@
 import os
+import random
 import time
 from decimal import Decimal, getcontext
 from urllib.request import urlretrieve
@@ -13,6 +14,26 @@ for i in range(250):
 cpu_time = time.time() - cpu_start
 
 print(f"CPU Test: {round(cpu_time, 2)}s")
+
+gb = 2
+size = gb * (1024**3)
+mem_start = time.time()
+# Create
+arr1 = bytearray(size)
+for i in range(0, size, 4096):
+    arr1[i] = 1
+# Copy
+arr2 = bytearray(size)
+arr2[:] = arr1
+# Random Access
+rng = random.Random(0)
+total = 0
+for _ in range(4_000_000):
+    total += arr1[rng.randrange(size)]
+del arr1, arr2
+mem_time = time.time() - mem_start
+
+print(f"Memory Test: {round(mem_time, 2)}s")
 
 file_start = time.time()
 file_name = "sejbench-file.txt"
