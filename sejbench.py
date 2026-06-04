@@ -15,7 +15,7 @@ cpu_time = time.time() - cpu_start
 
 print(f"CPU Test: {round(cpu_time, 2)}s")
 
-gb = 2
+gb = 1
 size = gb * (1024**3)
 mem_start = time.time()
 # Create
